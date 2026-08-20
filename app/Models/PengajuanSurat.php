@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use App\Models\User;
+use App\Models\JenisSurat;
+use App\Models\Notifikasi;
 
 class PengajuanSurat extends Model
 {
@@ -25,11 +28,14 @@ class PengajuanSurat extends Model
         'status' => 'string',
     ];
 
-    public function user(): BelongsTo
+    public function user()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'user_id');
     }
-
+    public function notifikasi()
+{
+    return $this->hasMany(Notifikasi::class, 'application_id');
+}
     public function jenisSurat(): BelongsTo
     {
         return $this->belongsTo(JenisSurat::class, 'jenis_surat_id');

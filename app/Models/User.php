@@ -8,17 +8,19 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use App\Models\PengajuanSurat;
+use App\Models\Notifikasi;
 
 class User extends Authenticatable
 {
     public function pengajuanSurat(): HasMany
 {
-    return $this->hasMany(PengajuanSurat::class);
+    return $this->hasMany(PengajuanSurat::class, 'user_id');
 }
 
 public function notifikasi(): HasMany
 {
-    return $this->hasMany(Notifikasi::class);
+    return $this->hasMany(Notifikasi::class, 'user_id');
 }
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -29,6 +31,7 @@ public function notifikasi(): HasMany
      */
     protected $fillable = [
         'name',
+        'nim',
         'email',
         'password',
         'role',
