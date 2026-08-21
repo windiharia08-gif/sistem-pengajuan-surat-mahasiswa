@@ -2,23 +2,31 @@
 
 namespace Database\Seeders;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\JenisSurat;
 
 class DatabaseSeeder extends Seeder
 {
-    /**
-     * Seed the application's database.
-     *
-     * @return void
-     */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        JenisSurat::create([
+            'nama_surat' => 'Surat Keterangan Aktif Kuliah',
+            'deskripsi' => 'Surat keterangan bahwa mahasiswa masih aktif kuliah.',
+        ]);
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        JenisSurat::create([
+            'nama_surat' => 'Surat Keterangan Beasiswa',
+            'deskripsi' => 'Surat keterangan untuk keperluan pengajuan beasiswa.',
+        ]);
+
+        JenisSurat::create([
+            'nama_surat' => 'Surat Keterangan Lulus',
+            'deskripsi' => 'Surat keterangan bahwa mahasiswa telah lulus.',
+        ]);
+
+        JenisSurat::create([
+            'nama_surat' => 'Surat Pengantar',
+            'deskripsi' => 'Surat pengantar untuk keperluan mahasiswa.',
+        ]);
     }
 }

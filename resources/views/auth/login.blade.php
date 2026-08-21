@@ -11,7 +11,7 @@
                     <img
                         src="{{ asset('images/logounw.png') }}"
                         alt="Logo Unw"
-                        class="w-12 h-12 object-contain"
+                        class="w-12 h-12 fill-current"
                     >
                 </div>
 
@@ -147,7 +147,7 @@
 
                         <button
                             type="submit"
-                            class="w-full inline-flex justify-center items-center px-4 py-3 bg-slate-800 border border-transparent rounded-lg font-semibold text-sm text-white uppercase tracking-wider hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-500 transition"
+                            class="w-full inline-flex justify-center items-center px-4 py-3 bg-slate-800 border border-transparent rounded-lg font-semibold text-sm text-black uppercase tracking-wider hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-500 transition"
                         >
                             Masuk
                         </button>
