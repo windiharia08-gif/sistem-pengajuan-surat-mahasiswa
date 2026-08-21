@@ -1,66 +1,109 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Sistem Pengajuan Surat Mahasiswa
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Sistem Pengajuan Surat Mahasiswa adalah aplikasi berbasis web yang digunakan untuk mempermudah proses pengajuan surat akademik oleh mahasiswa secara online serta membantu admin dalam melakukan pengelolaan dan verifikasi pengajuan.
 
-## About Laravel
+Aplikasi ini dibuat untuk menggantikan proses pengajuan surat secara manual sehingga proses pengajuan, pemeriksaan, dan pemantauan status surat dapat dilakukan secara lebih terstruktur.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Fitur Utama
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Mahasiswa
 
-## Learning Laravel
+- Login sebagai mahasiswa
+- Mengakses dashboard mahasiswa
+- Melihat jenis surat yang tersedia
+- Mengajukan surat secara online
+- Mengisi data pengajuan surat
+- Mengunggah dokumen pendukung
+- Melihat daftar pengajuan
+- Memantau status pengajuan surat
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Admin
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- Login sebagai admin
+- Mengakses dashboard admin
+- Melihat jumlah pengajuan surat
+- Melihat pengajuan terbaru
+- Melihat daftar pengajuan mahasiswa
+- Melihat detail pengajuan
+- Melakukan proses verifikasi pengajuan
+- Mengubah status pengajuan
+- Mengelola proses pengajuan surat
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Keamanan dan Hak Akses
 
-## Laravel Sponsors
+- Sistem memiliki role mahasiswa dan admin
+- Halaman mahasiswa dilindungi dari akses admin yang tidak sesuai
+- Halaman admin dilindungi dari akses mahasiswa
+- Pengguna harus melakukan autentikasi sebelum mengakses halaman yang dilindungi
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+---
 
-### Premium Partners
+## Alur Sistem
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+### Alur Mahasiswa
 
-## Contributing
+1. Mahasiswa melakukan login.
+2. Mahasiswa masuk ke dashboard.
+3. Mahasiswa memilih menu pengajuan surat.
+4. Mahasiswa memilih jenis surat.
+5. Mahasiswa mengisi data yang diperlukan.
+6. Mahasiswa mengunggah dokumen pendukung.
+7. Mahasiswa mengirim pengajuan.
+8. Pengajuan tersimpan ke dalam sistem.
+9. Mahasiswa dapat memantau status pengajuan.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Alur Admin
 
-## Code of Conduct
+1. Admin melakukan login.
+2. Admin masuk ke dashboard admin.
+3. Admin melihat daftar pengajuan mahasiswa.
+4. Admin membuka detail pengajuan.
+5. Admin memeriksa data dan dokumen pengajuan.
+6. Admin melakukan proses verifikasi.
+7. Status pengajuan diperbarui.
+8. Mahasiswa dapat melihat status pengajuan melalui sistem.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+---
 
-## Security Vulnerabilities
+## Teknologi yang Digunakan
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- Laravel
+- PHP
+- MySQL
+- Blade
+- HTML
+- CSS
+- JavaScript
+- Composer
+- Vite
+- Git
+- GitHub
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Struktur Sistem
+
+Aplikasi menggunakan framework Laravel dengan struktur utama:
+
+```text
+sistem-pengajuan-surat-mahasiswa/
+├── app/
+├── bootstrap/
+├── config/
+├── database/
+│   ├── migrations/
+│   └── seeders/
+├── public/
+├── resources/
+│   └── views/
+├── routes/
+├── storage/
+├── tests/
+├── vendor/
+├── .env.example
+├── artisan
+├── composer.json
+├── package.json
+└── README.md
